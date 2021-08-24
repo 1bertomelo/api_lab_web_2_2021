@@ -7,6 +7,7 @@ namespace MinhaPrimeiraApi.Models
 {
     public class Pessoa
     {
+        public int Id { get;  set; }
         public string Nome { get;  set; }
         public float peso { get;  set; }
         public float altura { get;  set; }
