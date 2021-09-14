@@ -2,9 +2,11 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using FluentValidation.Results;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using MinhaPrimeiraApi.Models;
+using MinhaPrimeiraApi.Validations;
 
 namespace MinhaPrimeiraApi.Controllers
 {
@@ -50,7 +52,21 @@ namespace MinhaPrimeiraApi.Controllers
 
         public ActionResult Adicionar(Pessoa pessoa)
         {
-            pessoas.Add(pessoa);
+
+            PessoaValidation validator = new PessoaValidation();
+
+            ValidationResult results = validator.Validate(pessoa);
+
+            if (!results.IsValid)
+            {
+                List<String> erro = new List<string>();
+                foreach (var failure in results.Errors)
+                {
+                    erro.Add("Property " + failure.PropertyName + " failed validation. Error was: " + failure.ErrorMessage);
+                }
+                return BadRequest(erro);
+            }
+                pessoas.Add(pessoa);
             return CreatedAtAction(nameof(Adicionar), pessoa);
         }
 
