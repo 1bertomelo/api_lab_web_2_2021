@@ -8,13 +8,20 @@ namespace MinhaPrimeiraApi.Services
 {
     public class AprovacaoCreditoService : IAprovacaoCreditoService
     {
-        public decimal analiseDeCredito(Pessoa pessoa)
+        public decimal analiseDeCredito(DadosPessoaAnalise pessoa)
         {
-            if (pessoa.idade < 18)
+
+            if (pessoa.RendaMensal < 1000)
                 return 0;
-            if (pessoa.idade >= 18 && pessoa.idade <= 65)
-                return 100;
-            return 50;
+            if (pessoa.RendaMensal >= 1000 && pessoa.RendaMensal <= 5000 && pessoa.QtdeFilhos == 0 )
+                return 30;
+            if (pessoa.RendaMensal >= 1000 && pessoa.RendaMensal <= 5000 && pessoa.QtdeFilhos <= 2)
+                return 20;
+            if (pessoa.RendaMensal >= 1000 && pessoa.RendaMensal <= 5000 && pessoa.QtdeFilhos > 2)
+                return 10;
+            if (pessoa.RendaMensal >  5000 )
+                return 35;
+            return 0;
         }
     }
 }

@@ -9,10 +9,13 @@ namespace MinhaPrimeiraApi.Models
     {
         public int Id { get;  set; }
         public string Nome { get;  set; }
-        public float peso { get;  set; }
-        public float altura { get;  set; }
+        public float Peso { get;  set; }
+        public float Altura { get;  set; }
         public string Cpf { get;  set; }
-        public int idade { get;  set; }
-        public string sexo { get;  set; }
+        public int Idade { get;  set; }
+        public string Sexo { get;  set; }
+        public decimal RendaMensal { get; set; }
+        public int QtdeFilhos { get; set; }
+
     }
 }

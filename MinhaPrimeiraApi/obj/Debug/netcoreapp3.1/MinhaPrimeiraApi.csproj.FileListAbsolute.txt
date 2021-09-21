@@ -19,7 +19,6 @@ E:\Faculdade\2021_2\lab\aula02\codigo\MinhaPrimeiraApi\MinhaPrimeiraApi\obj\Debu
 E:\Faculdade\2021_2\lab\aula02\codigo\MinhaPrimeiraApi\MinhaPrimeiraApi\bin\Debug\netcoreapp3.1\FluentValidation.dll
 E:\Faculdade\2021_2\lab\aula02\codigo\MinhaPrimeiraApi\MinhaPrimeiraApi\bin\Debug\netcoreapp3.1\FluentValidation.AspNetCore.dll
 E:\Faculdade\2021_2\lab\aula02\codigo\MinhaPrimeiraApi\MinhaPrimeiraApi\bin\Debug\netcoreapp3.1\FluentValidation.DependencyInjectionExtensions.dll
-E:\Faculdade\2021_2\lab\aula02\codigo\MinhaPrimeiraApi\MinhaPrimeiraApi\obj\Debug\netcoreapp3.1\MinhaPrimeiraApi.csproj.CoreCompileInputs.cache
-E:\Faculdade\2021_2\lab\aula02\codigo\MinhaPrimeiraApi\MinhaPrimeiraApi\obj\Debug\netcoreapp3.1\MinhaPrimeiraApi.MvcApplicationPartsAssemblyInfo.cs
-E:\Faculdade\2021_2\lab\aula02\codigo\MinhaPrimeiraApi\MinhaPrimeiraApi\obj\Debug\netcoreapp3.1\MinhaPrimeiraApi.MvcApplicationPartsAssemblyInfo.cache
 E:\Faculdade\2021_2\lab\aula02\codigo\MinhaPrimeiraApi\MinhaPrimeiraApi\obj\Debug\netcoreapp3.1\MinhaPrimeiraApi.csproj.CopyComplete
+E:\Faculdade\2021_2\lab\aula02\codigo\MinhaPrimeiraApi\MinhaPrimeiraApi\bin\Debug\netcoreapp3.1\MimeKit.dll
+E:\Faculdade\2021_2\lab\aula02\codigo\MinhaPrimeiraApi\MinhaPrimeiraApi\bin\Debug\netcoreapp3.1\BouncyCastle.Crypto.dll

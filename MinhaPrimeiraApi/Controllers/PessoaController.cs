@@ -19,10 +19,10 @@ namespace MinhaPrimeiraApi.Controllers
         public PessoaController()
         {
             pessoas = new List<Pessoa>();
-            pessoas.Add(new Pessoa() {Id = 1, Nome = "H1", altura=1.67F, Cpf="123", peso=56 });
-            pessoas.Add(new Pessoa() {Id = 2, Nome = "Maria", altura = 1.2F, Cpf = "456", peso = 23 });
-            pessoas.Add(new Pessoa() {Id = 3, Nome = "Nicholas", altura = 1.05F, Cpf = "789", peso = 16 });
-            pessoas.Add(new Pessoa() {Id = 4, Nome = "Anastacia", altura = 1.5F, Cpf = "345", peso = 56 });
+            pessoas.Add(new Pessoa() {Id = 1, Nome = "H1", Altura=1.67F, Cpf="123", Peso=56 });
+            pessoas.Add(new Pessoa() {Id = 2, Nome = "Maria", Altura = 1.2F, Cpf = "456", Peso = 23 });
+            pessoas.Add(new Pessoa() {Id = 3, Nome = "Nicholas", Altura = 1.05F, Cpf = "789", Peso = 16 });
+            pessoas.Add(new Pessoa() {Id = 4, Nome = "Anastacia", Altura = 1.5F, Cpf = "345", Peso = 56 });
 
         }
 
@@ -43,7 +43,7 @@ namespace MinhaPrimeiraApi.Controllers
         [HttpPost]
         public string Imc([FromBody] Pessoa pessoa)
         {
-            return  (pessoa.peso / (pessoa.altura * pessoa.altura)).ToString();
+            return  (pessoa.Peso / (pessoa.Altura * pessoa.Altura)).ToString();
         }
 
         [HttpPost("Adicionar")]

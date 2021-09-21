@@ -8,6 +8,6 @@ namespace MinhaPrimeiraApi.Services
 {
     public interface IAprovacaoCreditoService
     {
-        public decimal analiseDeCredito(Pessoa pessoa);
+        public decimal analiseDeCredito(DadosPessoaAnalise pessoa);
     }
 }
