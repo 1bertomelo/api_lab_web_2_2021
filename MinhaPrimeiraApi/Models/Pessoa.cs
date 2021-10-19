@@ -1,4 +1,6 @@
-﻿using System;
+﻿using MongoDB.Bson;
+using MongoDB.Bson.Serialization.Attributes;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -7,7 +9,9 @@ namespace MinhaPrimeiraApi.Models
 {
     public class Pessoa
     {
-        public int Id { get;  set; }
+        [BsonRepresentation(BsonType.ObjectId)]
+        public string Id { get;  set; }
+        public string Codigo { get; set; }
         public string Nome { get;  set; }
         public float Peso { get;  set; }
         public float Altura { get;  set; }

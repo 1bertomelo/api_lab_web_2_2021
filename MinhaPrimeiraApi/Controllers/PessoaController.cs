@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using FluentValidation.Results;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using MinhaPrimeiraApi.Context;
 using MinhaPrimeiraApi.Models;
 using MinhaPrimeiraApi.Validations;
 
@@ -13,31 +14,23 @@ namespace MinhaPrimeiraApi.Controllers
     [Route("api/[controller]")]
     [ApiController]
     public class PessoaController : ControllerBase
-    {
-        private readonly IList<Pessoa> pessoas;
-
+    {        
+        private readonly PessoaContext Context;
         public PessoaController()
         {
-            pessoas = new List<Pessoa>();
-            pessoas.Add(new Pessoa() {Id = 1, Nome = "H1", Altura=1.67F, Cpf="123", Peso=56 });
-            pessoas.Add(new Pessoa() {Id = 2, Nome = "Maria", Altura = 1.2F, Cpf = "456", Peso = 23 });
-            pessoas.Add(new Pessoa() {Id = 3, Nome = "Nicholas", Altura = 1.05F, Cpf = "789", Peso = 16 });
-            pessoas.Add(new Pessoa() {Id = 4, Nome = "Anastacia", Altura = 1.5F, Cpf = "345", Peso = 56 });
-
+            Context = new PessoaContext();
         }
 
         [HttpGet]
-        public string OlaMundo(string nome)
+        public ActionResult OlaMundo()
         {
-            return $"Olá Mundo {nome}!";
+            return Ok();
         }
 
         [HttpGet("ObterPorCpf/{cpf}")]
         public ActionResult ObterPorCpf(string cpf)
         {
-            var resultadoPessoa = pessoas.Where(p => p.Cpf == cpf).FirstOrDefault();
-            if (resultadoPessoa == null) return BadRequest();
-            return Ok(resultadoPessoa);
+              return Ok();
         }
 
         [HttpPost]
@@ -66,22 +59,16 @@ namespace MinhaPrimeiraApi.Controllers
                 }
                 return BadRequest(erro);
             }
-                pessoas.Add(pessoa);
-            return CreatedAtAction(nameof(Adicionar), pessoa);
+
+            Context._pessoas.InsertOne(pessoa);
+            
+            return CreatedAtAction(nameof(Adicionar), "");
         }
 
         [HttpPut("Atualizar/{id}")]
         public ActionResult Atualizar(int id,[FromBody] Pessoa pessoa)
         {
-            var resultadoPessoa = pessoas.Where(p => p.Id == id).FirstOrDefault();
-            if (resultadoPessoa == null)
-            {
-                return NotFound();
-            }
-            pessoa.Id = id;
-            pessoas.Remove(resultadoPessoa);
-            pessoas.Add(pessoa);
-
+     
             return NoContent();
 
         }
@@ -89,13 +76,7 @@ namespace MinhaPrimeiraApi.Controllers
 
         [HttpDelete("Remover/{id}")]
         public ActionResult Remover(int id)
-        {
-            var resultadoPessoa = pessoas.Where(p => p.Id == id).FirstOrDefault();
-            if (resultadoPessoa == null)
-            {
-                return NotFound();
-            }
-            pessoas.Remove(resultadoPessoa);
+        {     
             return NoContent();
         }
     }

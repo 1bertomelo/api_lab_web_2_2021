@@ -54,6 +54,14 @@
             "MimeKit": {
               "target": "Package",
               "version": "[2.15.1, )"
+            },
+            "MongoDB.Driver.Core": {
+              "target": "Package",
+              "version": "[2.13.1, )"
+            },
+            "mongocsharpdriver": {
+              "target": "Package",
+              "version": "[2.13.1, )"
             }
           },
           "imports": [
@@ -74,7 +82,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.413\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.414\\RuntimeIdentifierGraph.json"
         }
       }
     }
