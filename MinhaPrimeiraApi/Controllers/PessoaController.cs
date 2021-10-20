@@ -8,6 +8,7 @@ using Microsoft.AspNetCore.Mvc;
 using MinhaPrimeiraApi.Context;
 using MinhaPrimeiraApi.Models;
 using MinhaPrimeiraApi.Validations;
+using MongoDB.Driver;
 
 namespace MinhaPrimeiraApi.Controllers
 {
@@ -30,7 +31,7 @@ namespace MinhaPrimeiraApi.Controllers
         [HttpGet("ObterPorCpf/{cpf}")]
         public ActionResult ObterPorCpf(string cpf)
         {
-              return Ok();
+            return Ok( Context._pessoas.Find<Pessoa>(p => p.Cpf == cpf).FirstOrDefault());                
         }
 
         [HttpPost]
@@ -66,8 +67,14 @@ namespace MinhaPrimeiraApi.Controllers
         }
 
         [HttpPut("Atualizar/{id}")]
-        public ActionResult Atualizar(int id,[FromBody] Pessoa pessoa)
+        public ActionResult Atualizar(string id,[FromBody] Pessoa pessoa)
         {
+            var pResultado = Context._pessoas.Find<Pessoa>(p => p.Id == id).FirstOrDefault();
+            if (pResultado == null) return 
+                    NotFound("Id não encontrado, atualizacao não realizada!");
+            
+            pessoa.Id = id;
+            Context._pessoas.ReplaceOne<Pessoa>(p => p.Id == id, pessoa);
      
             return NoContent();
 
@@ -75,8 +82,13 @@ namespace MinhaPrimeiraApi.Controllers
 
 
         [HttpDelete("Remover/{id}")]
-        public ActionResult Remover(int id)
-        {     
+        public ActionResult Remover(string id)
+        {
+            var pResultado = Context._pessoas.Find<Pessoa>(p => p.Id == id).FirstOrDefault();
+            if (pResultado == null) return
+                    NotFound("Id não encontrado, atualizacao não realizada!");
+
+            Context._pessoas.DeleteOne<Pessoa>(filter => filter.Id == id);
             return NoContent();
         }
     }
