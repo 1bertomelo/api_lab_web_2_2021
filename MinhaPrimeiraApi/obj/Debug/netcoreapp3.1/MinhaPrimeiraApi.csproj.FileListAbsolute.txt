@@ -40,6 +40,14 @@ E:\Faculdade\2021_2\lab\aula02\codigo\MinhaPrimeiraApi\MinhaPrimeiraApi\bin\Debu
 E:\Faculdade\2021_2\lab\aula02\codigo\MinhaPrimeiraApi\MinhaPrimeiraApi\bin\Debug\netcoreapp3.1\runtimes\win\native\mongocrypt.dll
 E:\Faculdade\2021_2\lab\aula02\codigo\MinhaPrimeiraApi\MinhaPrimeiraApi\bin\Debug\netcoreapp3.1\MongoDB.Driver.Legacy.dll
 E:\Faculdade\2021_2\lab\aula02\codigo\MinhaPrimeiraApi\MinhaPrimeiraApi\bin\Debug\netcoreapp3.1\MongoDB.Driver.dll
+E:\Faculdade\2021_2\lab\aula02\codigo\MinhaPrimeiraApi\MinhaPrimeiraApi\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Logging.dll
+E:\Faculdade\2021_2\lab\aula02\codigo\MinhaPrimeiraApi\MinhaPrimeiraApi\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Tokens.dll
+E:\Faculdade\2021_2\lab\aula02\codigo\MinhaPrimeiraApi\MinhaPrimeiraApi\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.JsonWebTokens.dll
+E:\Faculdade\2021_2\lab\aula02\codigo\MinhaPrimeiraApi\MinhaPrimeiraApi\bin\Debug\netcoreapp3.1\System.IdentityModel.Tokens.Jwt.dll
+E:\Faculdade\2021_2\lab\aula02\codigo\MinhaPrimeiraApi\MinhaPrimeiraApi\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+E:\Faculdade\2021_2\lab\aula02\codigo\MinhaPrimeiraApi\MinhaPrimeiraApi\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Protocols.dll
+E:\Faculdade\2021_2\lab\aula02\codigo\MinhaPrimeiraApi\MinhaPrimeiraApi\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+E:\Faculdade\2021_2\lab\aula02\codigo\MinhaPrimeiraApi\MinhaPrimeiraApi\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll
 E:\Faculdade\2021_2\lab\aula02\codigo\MinhaPrimeiraApi\MinhaPrimeiraApi\obj\Debug\netcoreapp3.1\MinhaPrimeiraApi.csproj.CoreCompileInputs.cache
 E:\Faculdade\2021_2\lab\aula02\codigo\MinhaPrimeiraApi\MinhaPrimeiraApi\obj\Debug\netcoreapp3.1\MinhaPrimeiraApi.MvcApplicationPartsAssemblyInfo.cs
 E:\Faculdade\2021_2\lab\aula02\codigo\MinhaPrimeiraApi\MinhaPrimeiraApi\obj\Debug\netcoreapp3.1\MinhaPrimeiraApi.MvcApplicationPartsAssemblyInfo.cache
