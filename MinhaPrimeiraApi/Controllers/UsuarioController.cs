@@ -25,14 +25,15 @@ namespace MinhaPrimeiraApi.Controllers
         public async Task<ActionResult<dynamic>> Authenticate([FromBody] Usuario model)
         {         
             // Recupera o usuário
-            var user = Context._usuarios.Find<Usuario>(p => p.UserName == model.UserName).FirstOrDefault();
+            var user = await Context._usuarios.Find<Usuario>
+                (p => p.UserName == model.UserName).FirstOrDefaultAsync();
 
             // Verifica se o usuário existe
             if (user == null)
-                return NotFound(new { message = "Usuário ou senha inválidos" });
+                return NotFound(new { message = "Usuário não existe" });
 
             if (user.Password != model.Password)
-                return NotFound(new { message = "Usuário ou senha inválidos" });
+                return BadRequest(new { message = "Senha inválida" });
 
             // Gera o Token
             var token = TokenService.GenerateToken(user);

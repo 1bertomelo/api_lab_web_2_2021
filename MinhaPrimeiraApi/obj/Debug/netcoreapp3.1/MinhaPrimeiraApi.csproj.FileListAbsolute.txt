@@ -48,6 +48,15 @@ E:\Faculdade\2021_2\lab\aula02\codigo\MinhaPrimeiraApi\MinhaPrimeiraApi\bin\Debu
 E:\Faculdade\2021_2\lab\aula02\codigo\MinhaPrimeiraApi\MinhaPrimeiraApi\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Protocols.dll
 E:\Faculdade\2021_2\lab\aula02\codigo\MinhaPrimeiraApi\MinhaPrimeiraApi\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
 E:\Faculdade\2021_2\lab\aula02\codigo\MinhaPrimeiraApi\MinhaPrimeiraApi\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll
+E:\Faculdade\2021_2\lab\aula02\codigo\MinhaPrimeiraApi\MinhaPrimeiraApi\bin\Debug\netcoreapp3.1\Microsoft.OpenApi.dll
+E:\Faculdade\2021_2\lab\aula02\codigo\MinhaPrimeiraApi\MinhaPrimeiraApi\bin\Debug\netcoreapp3.1\Swashbuckle.AspNetCore.Swagger.dll
+E:\Faculdade\2021_2\lab\aula02\codigo\MinhaPrimeiraApi\MinhaPrimeiraApi\bin\Debug\netcoreapp3.1\Swashbuckle.AspNetCore.SwaggerGen.dll
+E:\Faculdade\2021_2\lab\aula02\codigo\MinhaPrimeiraApi\MinhaPrimeiraApi\bin\Debug\netcoreapp3.1\Swashbuckle.AspNetCore.SwaggerUI.dll
+E:\Faculdade\2021_2\lab\aula02\codigo\MinhaPrimeiraApi\MinhaPrimeiraApi\bin\Debug\netcoreapp3.1\Microsoft.Extensions.PlatformAbstractions.dll
+E:\Faculdade\2021_2\lab\aula02\codigo\MinhaPrimeiraApi\MinhaPrimeiraApi\bin\Debug\netcoreapp3.1\MinhaPrimeiraApi.xml
+E:\Faculdade\2021_2\lab\aula02\codigo\MinhaPrimeiraApi\MinhaPrimeiraApi\bin\Debug\netcoreapp3.1\System.Net.Http.Formatting.dll
+E:\Faculdade\2021_2\lab\aula02\codigo\MinhaPrimeiraApi\MinhaPrimeiraApi\bin\Debug\netcoreapp3.1\System.Web.Http.dll
+E:\Faculdade\2021_2\lab\aula02\codigo\MinhaPrimeiraApi\MinhaPrimeiraApi\bin\Debug\netcoreapp3.1\Swashbuckle.Core.dll
 E:\Faculdade\2021_2\lab\aula02\codigo\MinhaPrimeiraApi\MinhaPrimeiraApi\obj\Debug\netcoreapp3.1\MinhaPrimeiraApi.csproj.CoreCompileInputs.cache
 E:\Faculdade\2021_2\lab\aula02\codigo\MinhaPrimeiraApi\MinhaPrimeiraApi\obj\Debug\netcoreapp3.1\MinhaPrimeiraApi.MvcApplicationPartsAssemblyInfo.cs
 E:\Faculdade\2021_2\lab\aula02\codigo\MinhaPrimeiraApi\MinhaPrimeiraApi\obj\Debug\netcoreapp3.1\MinhaPrimeiraApi.MvcApplicationPartsAssemblyInfo.cache

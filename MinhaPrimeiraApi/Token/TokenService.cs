@@ -11,7 +11,7 @@ using System.Threading.Tasks;
 namespace MinhaPrimeiraApi.Token
 {
     public static class TokenService
-    {
+    {   
         public static string GenerateToken(Usuario user)
         {
             var tokenHandler = new JwtSecurityTokenHandler();
@@ -23,7 +23,7 @@ namespace MinhaPrimeiraApi.Token
                     new Claim(ClaimTypes.Name, user.UserName.ToString()),
                  
                 }),
-                Expires = DateTime.UtcNow.AddHours(2),
+                Expires = DateTime.UtcNow.AddMinutes(29),
                 SigningCredentials = new SigningCredentials(new SymmetricSecurityKey(key), SecurityAlgorithms.HmacSha256Signature)
             };
             var token = tokenHandler.CreateToken(tokenDescriptor);

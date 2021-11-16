@@ -18,6 +18,7 @@ namespace MinhaPrimeiraApi.Controllers
     public class PessoaController : ControllerBase
     {        
         private readonly PessoaContext Context;
+        
         public PessoaController()
         {
             Context = new PessoaContext();
@@ -29,7 +30,13 @@ namespace MinhaPrimeiraApi.Controllers
             return Ok();
         }
 
-        
+
+        /// <summary>
+        /// Consulta dados de uma pessoa a partir do CPF
+        /// Requer uso de token.
+        /// </summary>
+        /// <param name="cpf">CPF</param>
+        /// <returns>Objeto contendo os dados de uma pessoa.</returns>
         [Authorize]
         [HttpGet("ObterPorCpf/{cpf}")]
         public ActionResult ObterPorCpf(string cpf)

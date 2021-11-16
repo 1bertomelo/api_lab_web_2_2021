@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>MinhaPrimeiraApi</name>
+    </assembly>
+    <members>
+        <member name="M:MinhaPrimeiraApi.Controllers.PessoaController.ObterPorCpf(System.String)">
+            <summary>
+            Consulta dados de uma pessoa a partir do CPF
+            Requer uso de token.
+            </summary>
+            <param name="cpf">CPF</param>
+            <returns>Objeto contendo os dados de uma pessoa.</returns>
+        </member>
+    </members>
+</doc>

@@ -16,6 +16,11 @@ using MinhaPrimeiraApi.Services;
 using MinhaPrimeiraApi.Token;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Swashbuckle.AspNetCore.Swagger;
+using Microsoft.Extensions.PlatformAbstractions;
+using Swashbuckle.Swagger;
+using System.IO;
+using Microsoft.OpenApi.Models;
 
 namespace MinhaPrimeiraApi
 {
@@ -53,6 +58,56 @@ namespace MinhaPrimeiraApi
                     ValidateAudience = false
                 };
             });
+
+            // Configurando o serviço de documentação do Swagger
+            services.AddSwaggerGen(c =>
+            {
+                c.SwaggerDoc("v1",
+                    new OpenApiInfo
+                    {
+                        Title = "Aula Lab. Uniaraxá",
+                        Version = "v1",
+                        Description = "Exemplo de API REST criada com o ASP.NET Core",
+                        Contact = new OpenApiContact
+                        {
+                            Name = "H1",
+                            Url = new Uri( "https://github.com/1bertomelo")
+                        }
+                    });
+
+
+                c.AddSecurityDefinition("Bearer", new OpenApiSecurityScheme
+                {
+                    In = ParameterLocation.Header,
+                    Description = "Please insert JWT with Bearer into field",
+                    Name = "Authorization",
+                    Type = SecuritySchemeType.ApiKey,
+ //                     Type = SecuritySchemeType.,
+                    BearerFormat = "JWT",
+                });
+                c.AddSecurityRequirement(new OpenApiSecurityRequirement {
+               {
+                 new OpenApiSecurityScheme
+                 {
+                   Reference = new OpenApiReference
+                   {
+                     Type = ReferenceType.SecurityScheme,
+                     Id = "Bearer"
+                   }
+                  },
+                  new string[] { }
+                }
+              });
+                string caminhoAplicacao =
+                    PlatformServices.Default.Application.ApplicationBasePath;
+                string nomeAplicacao =
+                    PlatformServices.Default.Application.ApplicationName;
+                string caminhoXmlDoc =
+                    Path.Combine(caminhoAplicacao, $"{nomeAplicacao}.xml");
+
+                c.IncludeXmlComments(caminhoXmlDoc);
+
+            });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -69,6 +124,14 @@ namespace MinhaPrimeiraApi
 
             app.UseAuthentication();
             app.UseAuthorization();
+
+            // Ativando middlewares para uso do Swagger
+            app.UseSwagger();
+            app.UseSwaggerUI(c =>
+            {
+                c.SwaggerEndpoint("/swagger/v1/swagger.json",
+                    "Conversor de Temperaturas");
+            });
 
             app.UseEndpoints(endpoints =>
             {
