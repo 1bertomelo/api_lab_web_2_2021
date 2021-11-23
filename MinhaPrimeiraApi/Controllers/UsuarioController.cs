@@ -20,6 +20,27 @@ namespace MinhaPrimeiraApi.Controllers
             Context = new PessoaContext();
         }
 
+
+        /// <summary>
+        /// Método faz autenticação usuário e senha.
+        /// </summary>
+        /// <param name="Usuario"></param>
+        /// <param name="Senha"></param>
+        /// <returns>A newly created TodoItem</returns>
+        /// <remarks>
+        /// Sample request:
+        ///
+        ///     POST /Todo
+        ///     {
+        ///        
+        ///        "UserName": "H1",
+        ///        "Password": "H1"
+        ///     }
+        ///
+        /// </remarks>
+        /// <response code="201">Returns o token do usuário autenticado</response>
+        /// <response code="400">Usuario não existe</response>
+        /// <response code="500">Senha incorreta</response>
         [HttpPost]
         [Route("login")]
         public async Task<ActionResult<dynamic>> Authenticate([FromBody] Usuario model)

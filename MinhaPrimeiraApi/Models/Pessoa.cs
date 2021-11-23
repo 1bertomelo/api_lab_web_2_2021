@@ -24,5 +24,7 @@ namespace MinhaPrimeiraApi.Models
         public decimal RendaMensal { get; set; }
         public int QtdeFilhos { get; set; }
 
-    }
+		public string Foto { get;  set; }
+
+	}
 }

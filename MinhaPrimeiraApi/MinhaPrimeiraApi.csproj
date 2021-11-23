@@ -24,6 +24,7 @@
 
   <ItemGroup>
     <Folder Include="DTO\" />
+    <Folder Include="imagens\" />
   </ItemGroup>
 
 

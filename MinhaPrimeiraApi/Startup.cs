@@ -79,13 +79,25 @@ namespace MinhaPrimeiraApi
                 c.AddSecurityDefinition("Bearer", new OpenApiSecurityScheme
                 {
                     In = ParameterLocation.Header,
-                    Description = "Please insert JWT with Bearer into field",
+                    Description = "Por favor inclua o token no campo de valor:",
                     Name = "Authorization",
                     Type = SecuritySchemeType.ApiKey,
  //                     Type = SecuritySchemeType.,
                     BearerFormat = "JWT",
                 });
                 c.AddSecurityRequirement(new OpenApiSecurityRequirement {
+               {
+                 new OpenApiSecurityScheme
+                 {
+                   Reference = new OpenApiReference
+                   {
+                     Type = ReferenceType.SecurityScheme,
+                     Id = "Bearer"
+                   }
+                  },
+                  new string[] { }
+                }
+              });                c.AddSecurityRequirement(new OpenApiSecurityRequirement {
                {
                  new OpenApiSecurityScheme
                  {
@@ -130,7 +142,7 @@ namespace MinhaPrimeiraApi
             app.UseSwaggerUI(c =>
             {
                 c.SwaggerEndpoint("/swagger/v1/swagger.json",
-                    "Conversor de Temperaturas");
+                    "API Uniaxará em .NET Core");
             });
 
             app.UseEndpoints(endpoints =>

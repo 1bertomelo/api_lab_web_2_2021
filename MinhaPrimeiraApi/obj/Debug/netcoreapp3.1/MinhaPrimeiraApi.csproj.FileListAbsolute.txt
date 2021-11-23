@@ -1,13 +1,11 @@
 E:\Faculdade\2021_2\lab\aula02\codigo\MinhaPrimeiraApi\MinhaPrimeiraApi\bin\Debug\netcoreapp3.1\appsettings.Development.json
 E:\Faculdade\2021_2\lab\aula02\codigo\MinhaPrimeiraApi\MinhaPrimeiraApi\bin\Debug\netcoreapp3.1\appsettings.json
-E:\Faculdade\2021_2\lab\aula02\codigo\MinhaPrimeiraApi\MinhaPrimeiraApi\bin\Debug\netcoreapp3.1\Properties\launchSettings.json
 E:\Faculdade\2021_2\lab\aula02\codigo\MinhaPrimeiraApi\MinhaPrimeiraApi\bin\Debug\netcoreapp3.1\MinhaPrimeiraApi.exe
 E:\Faculdade\2021_2\lab\aula02\codigo\MinhaPrimeiraApi\MinhaPrimeiraApi\bin\Debug\netcoreapp3.1\MinhaPrimeiraApi.deps.json
 E:\Faculdade\2021_2\lab\aula02\codigo\MinhaPrimeiraApi\MinhaPrimeiraApi\bin\Debug\netcoreapp3.1\MinhaPrimeiraApi.runtimeconfig.json
 E:\Faculdade\2021_2\lab\aula02\codigo\MinhaPrimeiraApi\MinhaPrimeiraApi\bin\Debug\netcoreapp3.1\MinhaPrimeiraApi.runtimeconfig.dev.json
 E:\Faculdade\2021_2\lab\aula02\codigo\MinhaPrimeiraApi\MinhaPrimeiraApi\bin\Debug\netcoreapp3.1\MinhaPrimeiraApi.dll
 E:\Faculdade\2021_2\lab\aula02\codigo\MinhaPrimeiraApi\MinhaPrimeiraApi\bin\Debug\netcoreapp3.1\MinhaPrimeiraApi.pdb
-E:\Faculdade\2021_2\lab\aula02\codigo\MinhaPrimeiraApi\MinhaPrimeiraApi\obj\Debug\netcoreapp3.1\MinhaPrimeiraApi.csprojAssemblyReference.cache
 E:\Faculdade\2021_2\lab\aula02\codigo\MinhaPrimeiraApi\MinhaPrimeiraApi\obj\Debug\netcoreapp3.1\MinhaPrimeiraApi.AssemblyInfoInputs.cache
 E:\Faculdade\2021_2\lab\aula02\codigo\MinhaPrimeiraApi\MinhaPrimeiraApi\obj\Debug\netcoreapp3.1\MinhaPrimeiraApi.AssemblyInfo.cs
 E:\Faculdade\2021_2\lab\aula02\codigo\MinhaPrimeiraApi\MinhaPrimeiraApi\obj\Debug\netcoreapp3.1\MinhaPrimeiraApi.RazorTargetAssemblyInfo.cache
@@ -60,3 +58,6 @@ E:\Faculdade\2021_2\lab\aula02\codigo\MinhaPrimeiraApi\MinhaPrimeiraApi\bin\Debu
 E:\Faculdade\2021_2\lab\aula02\codigo\MinhaPrimeiraApi\MinhaPrimeiraApi\obj\Debug\netcoreapp3.1\MinhaPrimeiraApi.csproj.CoreCompileInputs.cache
 E:\Faculdade\2021_2\lab\aula02\codigo\MinhaPrimeiraApi\MinhaPrimeiraApi\obj\Debug\netcoreapp3.1\MinhaPrimeiraApi.MvcApplicationPartsAssemblyInfo.cs
 E:\Faculdade\2021_2\lab\aula02\codigo\MinhaPrimeiraApi\MinhaPrimeiraApi\obj\Debug\netcoreapp3.1\MinhaPrimeiraApi.MvcApplicationPartsAssemblyInfo.cache
+E:\Faculdade\2021_2\lab\aula02\codigo\MinhaPrimeiraApi\MinhaPrimeiraApi\obj\Debug\netcoreapp3.1\MinhaPrimeiraApi.csproj.AssemblyReference.cache
+E:\Faculdade\2021_2\lab\aula02\codigo\MinhaPrimeiraApi\MinhaPrimeiraApi\obj\Debug\netcoreapp3.1\MinhaPrimeiraApi.GeneratedMSBuildEditorConfig.editorconfig
+E:\Faculdade\2021_2\lab\aula02\codigo\MinhaPrimeiraApi\MinhaPrimeiraApi\obj\Debug\netcoreapp3.1\scopedcss\bundle\MinhaPrimeiraApi.styles.css

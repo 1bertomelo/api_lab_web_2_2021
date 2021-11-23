@@ -1,5 +1,7 @@
-﻿using System;
+﻿using Microsoft.AspNetCore.Hosting;
+using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
 using FluentValidation.Results;
@@ -10,6 +12,7 @@ using MinhaPrimeiraApi.Context;
 using MinhaPrimeiraApi.Models;
 using MinhaPrimeiraApi.Validations;
 using MongoDB.Driver;
+using Microsoft.Extensions.Hosting.Internal;
 
 namespace MinhaPrimeiraApi.Controllers
 {
@@ -18,10 +21,11 @@ namespace MinhaPrimeiraApi.Controllers
     public class PessoaController : ControllerBase
     {        
         private readonly PessoaContext Context;
-        
-        public PessoaController()
+        public static IWebHostEnvironment _environment;
+        public PessoaController(IWebHostEnvironment environment)
         {
             Context = new PessoaContext();
+            _environment = environment;
         }
 
         [HttpGet]
@@ -48,6 +52,48 @@ namespace MinhaPrimeiraApi.Controllers
         public string Imc([FromBody] Pessoa pessoa)
         {
             return  (pessoa.Peso / (pessoa.Altura * pessoa.Altura)).ToString();
+        }
+
+        [HttpPost("upload")]
+        public async Task<ActionResult> EnviaArquivo([FromForm] IFormFile arquivo)
+        {
+            if (arquivo.Length > 0)
+            {
+				if( arquivo.ContentType != "image/jpeg" &&
+                    arquivo.ContentType != "image/jpg" &&
+                    arquivo.ContentType != "image/png"
+                   )
+				{
+                    return BadRequest("Formato Inválido de imagens");
+				}
+
+                try
+                {
+                   
+                    string contentRootPath = _environment.ContentRootPath;
+                    string path = "";
+                    path = Path.Combine(contentRootPath, "imagens");
+
+                    if (!Directory.Exists(path))
+                    {
+                        Directory.CreateDirectory(path);
+                    }
+                    using (FileStream filestream = System.IO.File.Create(path + arquivo.FileName))
+                    {
+                        await arquivo.CopyToAsync(filestream);
+                        filestream.Flush();
+                        return Ok("Imagem enviada com sucesso " + arquivo.FileName);
+                    }
+                }
+                catch (Exception ex)
+                {
+                    return BadRequest(ex.ToString());
+                }
+            }
+            else
+            {
+                return BadRequest("Ocorreu uma falha no envio do arquivo...");
+            }
         }
 
         [HttpPost("Adicionar")]
